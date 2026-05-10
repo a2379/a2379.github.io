@@ -1,0 +1,39 @@
+#+title: Antero Mejr
+#+description: Personal website of Antero Mejr. Info and links to computer science publications,
+#+description: scientific software, writing, etc.
+
+* Antero Mejr
+
+I am a second-year computer science PhD student researching [[https://en.wikipedia.org/wiki/Formal_verification][formal verification]]
+for scientific software with the [[https://tupl.cs.tufts.edu/][TuPL group]].
+
+** work
+
+- academic publications:
+  + [[./archive/papers/dafnympi.pdf][DafnyMPI: A Dafny Library for Verifying Message-Passing Concurrent Programs]].
+    * Presented at [[https://popl26.sigplan.org/][POPL 2026]].
+
+- scientific software:
+  + [[https://www.youtube.com/watch?v=MaZmCh_SydQ][HiRise]], [[https://www.youtube.com/watch?v=dyqKSq5eo2s][LineUP]], [[https://www.youtube.com/watch?v=fTjYj1BX7cI][InReach]] CT scanners
+  + [[https://www.youtube.com/watch?v=hpCLgcn_6kw][Swoop]] MRI scanner
+  + [[https://www.youtube.com/watch?v=owGpJE2GPk8][OEC 3D]] C-arm
+
+- free software:
+  + [[https://srfi.schemers.org/srfi-252/][SRFI 252: Property Testing]] extension for Scheme
+  + [[./foss.org][free software summary]]
+
+- [[./writing.org][writing]]
+
+- [[./demo.org][demos]]
+
+** links
+
+These external links may have outdated or incorrect info.
+
+- publications @ [[https://dblp.org/pid/425/0764.html][DBLP]] / [[https://arxiv.org/search/cs?searchtype=author&query=Mejr,+A][arXiv]] / [[https://orcid.org/0009-0000-8124-467X][ORCiD]] / [[https://dl.acm.org/profile/99661802148][ACM]]
+
+- writing @ [[https://www.tuftsdaily.com/staff/antero-mejr][The Tufts Daily]]
+
+- demos @ [[https://demozoo.org/sceners/143062/][Demozoo]]
+
+- sports stats @ [[https://hemaratings.com/fighters/details/16772/][HEMA Rankings]]

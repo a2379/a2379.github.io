@@ -1,0 +1,43 @@
+#+title: Antero - Demo
+#+description: Personal website of Antero Mejr. Info and links to computer science publications,
+#+description: scientific software, writing, etc.
+
+* Demo [[./index.org][↑]]
+
+Past [[https://en.wikipedia.org/wiki/Demoscene][demoscene]] releases are archived here.
+
+** [[https://www.demosplash.org/][Demosplash]] 2025
+
+title: Welcome to the Osgood Library\\
+compo: ASCII/ANSI art - 2nd
+
+#+begin_export html
+<a href="/archive/demo/osgood/index.html">
+<img width=50% src="/archive/demo/osgood/thumbnail.png"></a>
+#+end_export
+[[./archive/demo/osgood/index.html][Click here to start.]]\\
+Will not display correctly on mobile devices.
+
+** [[http://atparty-demoscene.net/][@party]] 2025
+
+title: Glyph\\
+compo: tracker music - 2nd
+
+#+begin_export html
+<audio controls preload="none">
+  <source src="/archive/demo/glyph/glyph.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+#+end_export
+
+** [[http://atparty-demoscene.net/][@party]] 2024
+
+title: SAMraps\\
+compo: tracker music - 2nd
+
+#+begin_export html
+<audio controls preload="none">
+  <source src="/archive/demo/samraps/SAMraps.ogg" type="audio/ogg">
+  Your browser does not support the audio element.
+</audio>
+#+end_export

@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Antero Mejr - FOSS</title>
+<meta name="description" content="Personal website of Antero Mejr. Info and links to computer science publications,
+scientific software, writing, etc." />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-c:before { content: 'C'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'JavaScript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<style>
+#content{max-width:65ch;font-family: monospace, monospace;font-size:0.9em;
+margin-top:4em;margin-bottom:2em;}
+#org-div-home-and-up {max-width: 65ch; margin:0 auto}
+.figure{padding:0}
+table {margin-bottom: 1em;}
+.figure p{text-align:justify}
+ul{padding-left:1em; margin-bottom: 1em}
+a{color:inherit}</style>
+</head>
+<body>
+<div id="content" class="content">
+<div id="outline-container-org8313a15" class="outline-2">
+<h2 id="org8313a15">Free software <a href="./index.html">↑</a></h2>
+<div class="outline-text-2" id="text-org8313a15">
+<p>
+If you encounter issues with my code in a free software package then you are
+welcome to email me. The address is <code>mail</code> at [this website].
+</p>
+
+<p>Report generated on 2026-05-01 using <a href="https://antr.me/archive/snippets/git-contrib.py">git-contrib.py</a></p>
+<h3>Total</h3>
+<p>Commits: 247<br>Lines added: 8,956<br>Lines removed: 1,376</p><h3>Gauche</h3>
+<p><a href="https://github.com/shirok/Gauche">https://github.com/shirok/Gauche</a><br>Language: Scheme</p>
+<pre>commit 44c680e80 Add SRFI 253 - type checking (#1240) / 2026-03-18
+ doc/modsrfi.texi                | 101 ++++++++++++++++++++-
+ lib/srfi/253.scm                | 247 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ tests/include/srfi-253-test.scm | 234 ++++++++++++++++++++++++++++++++++++++++++++++++
+ tests/srfi.scm                  |  13 +++
+ 4 files changed, 593 insertions(+), 2 deletions(-)
+
+commit fa75d3d43 Make SRFI 64 test-group set up a runner if needed / 2025-01-19
+ lib/srfi/64.scm | 13 +++++++------
+ 1 file changed, 7 insertions(+), 6 deletions(-)
+
+commit d16e75c66 Add SRFI-138's compile-r7rs / 2024-05-12
+ doc/program.texi               |  10 +++++
+ lib/Makefile.in                |   2 +
+ lib/gauche/cgen/standalone.scm |  13 ++++--
+ lib/tools/compile-r7rs         | 123 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ src/core.c                     |   1 +
+ src/srfis.scm                  |   8 ++++
+ 6 files changed, 154 insertions(+), 3 deletions(-)
+
+commit 2418a7217 Add SRFI 215 - Central Log Exchange / 2024-03-13
+ doc/modsrfi.texi | 124 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ lib/srfi/215.scm | 116 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 240 insertions(+)</pre><h3>emacs</h3>
+<p><a href="https://github.com/emacs-mirror/emacs">https://github.com/emacs-mirror/emacs</a><br>Language: Lisp</p>
+<pre>commit 5979d17ea94 Fix index error when checking edited bug reports / 2025-07-26
+ lisp/mail/emacsbug.el | 17 ++++++++++-------
+ 1 file changed, 10 insertions(+), 7 deletions(-)
+
+commit c61d2587bbf Check for text about Org-mode when submitting emacs bugs / 2025-06-23
+ lisp/mail/emacsbug.el | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+
+commit 9cedb434ee3 Add file completion for git apply, am to pcomplete / 2025-01-28
+ lisp/pcmpl-git.el | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+commit d10acd16c90 Add scheme-mode indentation for SRFI 64, R7RS guard / 2025-01-18
+ lisp/progmodes/scheme.el | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+commit 099e439ea99 Add scheme-mode indentation rules for SRFI 227 and 253 / 2024-12-26
+ lisp/progmodes/scheme.el | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+
+commit 78eb102bc3d Allow viewing .dcm images via image-convert / 2023-05-15
+ lisp/files.el | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 7d41a23ad3b Allow viewing .six images via image-convert / 2023-05-15
+ lisp/files.el | 1 +
+ lisp/image.el | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+commit 225710ba79c Add file completion for "git blame" to pcomplete / 2024-01-04
+ lisp/pcmpl-git.el | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit cfc796f6f24 Add completion for 'doas' to pcomplete / 2023-10-15
+ etc/NEWS           | 4 ++++
+ lisp/pcmpl-unix.el | 8 ++++++++
+ 2 files changed, 12 insertions(+)
+
+commit 0b39e4daee4 Handle case-insensitivity for safe-local-variable-directories. / 2023-05-11
+ doc/emacs/custom.texi      | 7 +++----
+ doc/lispref/variables.texi | 8 +++-----
+ lisp/files.el              | 5 ++++-
+ 3 files changed, 10 insertions(+), 10 deletions(-)
+
+commit f24ea84f430 Add safe-local-variable-directories variable. / 2023-05-09
+ doc/emacs/custom.texi      | 22 ++++++++++++++++++++++
+ doc/lispref/variables.texi | 12 ++++++++++++
+ etc/NEWS                   |  5 +++++
+ lisp/files.el              | 34 +++++++++++++++++++++++++++++-----
+ test/lisp/files-tests.el   | 21 +++++++++++++++++++++
+ 5 files changed, 89 insertions(+), 5 deletions(-)
+
+commit c7fc4c81192 eww: Provide completions for bookmarks and suggested URIs. / 2023-04-13
+ etc/NEWS        |  6 ++++++
+ lisp/net/eww.el | 16 ++++++++++++----
+ 2 files changed, 18 insertions(+), 4 deletions(-)
+
+commit df6cc4d33b6 eww: Enable completion in URL/keyword prompt. / 2023-04-12
+ etc/NEWS        |  5 +++++
+ lisp/net/eww.el | 16 ++++++++++++----
+ 2 files changed, 17 insertions(+), 4 deletions(-)
+
+commit ebac67129e8 eshell: Add 'rgrep' builtin / 2023-03-24
+ doc/misc/eshell.texi   |  2 ++
+ etc/NEWS               |  5 +++++
+ lisp/eshell/em-unix.el | 11 ++++++++---
+ 3 files changed, 15 insertions(+), 3 deletions(-)</pre><h3>geiser</h3>
+<p><a href="https://gitlab.com/emacs-geiser/geiser">https://gitlab.com/emacs-geiser/geiser</a><br>Language: Lisp</p>
+<pre>commit 32196db Improve geiser-repl-superparen-mode compatibility / 2024-09-07
+ elisp/geiser-repl.el | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+commit fb8439a Improve geiser-repl-autoeval-mode behavior / 2024-09-07
+ elisp/geiser-repl.el | 45 ++++++++++++++++++++++++---------------------
+ 1 file changed, 24 insertions(+), 21 deletions(-)
+
+commit 5575975 Use delete-char instead of delete-backward-char. / 2023-09-22
+ elisp/geiser-repl.el | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 10aad17 Add geiser-repl-superparen-mode minor mode. / 2023-09-22
+ elisp/geiser-mode.el |  2 ++
+ elisp/geiser-repl.el | 47 +++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 49 insertions(+)
+
+commit dd81026 Correct typo that breaks geiser-repl-autoeval-mode. / 2023-05-02
+ elisp/geiser-repl.el | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 7e6e05b Add geiser-repl-autoeval-mode minor mode. / 2023-04-08
+ elisp/geiser-mode.el |  2 ++
+ elisp/geiser-repl.el | 57 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 59 insertions(+)</pre><h3>hare</h3>
+<p><a href="https://git.sr.ht/~sircmpwn/hare">https://git.sr.ht/~sircmpwn/hare</a><br>Language: Hare</p>
+<pre>commit 78fc925c time::chrono: allow /etc/localtime to be a file / 2022-07-07
+ time/chrono/timezone.ha | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 1db5f9b5 tests: skip NaN sign-related complex tests / 2022-06-27
+ math/complex/+test.ha | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)</pre><h3>org-mode</h3>
+<p><a href="https://git.sr.ht/~bzg/org-mode">https://git.sr.ht/~bzg/org-mode</a><br>Language: Lisp</p>
+<pre>commit 478576749 Move files when using `org-babel-tangle-publish' / 2023-11-17
+ lisp/ob-tangle.el | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)</pre><h3>srfi-44</h3>
+<p><a href="https://github.com/scheme-requests-for-implementation/srfi-44">https://github.com/scheme-requests-for-implementation/srfi-44</a><br>Language: Scheme</p>
+<pre>commit 3eb9c5a Remove comment / 2025-01-20
+ srfi/44.sld | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 6e8bc69 Spacing / 2025-01-20
+ srfi/44.sld | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit e5514e9 Remove outdated comment / 2025-01-20
+ srfi/44.sld | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 947aa77 All tests pass, all identifiers exported / 2025-01-20
+ srfi/44.sld            | 672 ++++++++++++++++++++++++++++++++++++++++++++++++++----------
+ tests/test-srfi-44.scm |  86 ++++++--
+ 2 files changed, 635 insertions(+), 123 deletions(-)
+
+commit a7f6bc5 All tests pass / 2025-01-20
+ srfi/44.sld            | 1230 ++++++++++++++++++++++++++++++-----------------------------
+ tests/test-srfi-44.scm |   11 +-
+ 2 files changed, 622 insertions(+), 619 deletions(-)
+
+commit 72eb379 4 tests failing / 2025-01-20
+ srfi/44.sld            | 47 ++++++++++++++++++++-----------------
+ tests/test-srfi-44.scm | 78 +++++++++++++++++++++++++++++++------------------------------
+ 2 files changed, 65 insertions(+), 60 deletions(-)
+
+commit e4b4bb6 Tests done, 109/128 pass / 2025-01-20
+ .gitignore             |   3 +-
+ srfi/44.sld            | 288 ++++++++++++++++++++++++++++++++++++++++--------------------
+ tests/test-srfi-44.scm | 175 ++++++++++++++++++++++++++++--------
+ 3 files changed, 331 insertions(+), 135 deletions(-)
+
+commit 5124b3b Add working implementation and tests. / 2025-01-19
+ srfi/256.sld           |  136 ++++++++
+ srfi/44.sld            | 1050 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ tests/test-srfi-44.scm |  246 ++++++++++++++
+ 3 files changed, 1432 insertions(+)</pre><h3>yasnippet-snippets</h3>
+<p><a href="https://github.com/AndreaCrotti/yasnippet-snippets/">https://github.com/AndreaCrotti/yasnippet-snippets/</a><br>Language: Lisp</p>
+<pre>commit 9205da0 prog-mode: Add snippets for SPDX-* comments (#512) / 2025-02-25
+ snippets/prog-mode/.yas-setup.el | 7 +++++++
+ snippets/prog-mode/spdxcopyright | 6 ++++++
+ snippets/prog-mode/spdxlicense   | 6 ++++++
+ 3 files changed, 19 insertions(+)</pre><h3>guix</h3>
+<p><a href="https://codeberg.org/guix/guix-mirror">https://codeberg.org/guix/guix-mirror</a><br>Language: Scheme</p>
+<pre>commit cb0cacf206 gnu: Add netpanzer. / 2024-10-11
+ gnu/packages/games.scm | 32 ++++++++++++++++++++++++++++++++
+ 1 file changed, 32 insertions(+)
+
+commit 76765c89cc gnu: qemu: Add gnutls to inputs. / 2024-10-21
+ gnu/packages/virtualization.scm | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 87c928e162 gnu: Add spamassassin. / 2023-06-04
+ gnu/packages/perl-web.scm | 87 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 87 insertions(+)
+
+commit cca94f021f gnu: Add perl-razor2-client-agent. / 2023-06-04
+ gnu/packages/perl-web.scm | 29 +++++++++++++++++++++++++++++
+ 1 file changed, 29 insertions(+)
+
+commit 45f9efdbd6 gnu: Add perl-net-libidn. / 2023-06-04
+ gnu/packages/perl-web.scm | 22 ++++++++++++++++++++++
+ 1 file changed, 22 insertions(+)
+
+commit 421d767bd4 gnu: Add perl-mail-dmarc. / 2023-06-04
+ gnu/packages/perl-web.scm | 60 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+ 1 file changed, 58 insertions(+), 2 deletions(-)
+
+commit b87830d30f gnu: Add perl-net-imap-simple. / 2023-06-04
+ gnu/packages/perl-web.scm | 22 ++++++++++++++++++++++
+ 1 file changed, 22 insertions(+)
+
+commit e693b9c02a gnu: Add perl-net-ip. / 2023-06-04
+ gnu/packages/perl-web.scm | 22 ++++++++++++++++++++++
+ 1 file changed, 22 insertions(+)
+
+commit 6af488be9a gnu: Add perl-net-smtps. / 2023-06-04
+ gnu/packages/perl-web.scm | 23 +++++++++++++++++++++++
+ 1 file changed, 23 insertions(+)
+
+commit b96721b7bd gnu: Add perl-geo-ip. / 2023-06-04
+ gnu/packages/perl-web.scm | 30 ++++++++++++++++++++++++++++++
+ 1 file changed, 30 insertions(+)
+
+commit 4dc4e057b4 gnu: Add geolite-country-data. / 2023-06-04
+ gnu/packages/perl-web.scm | 28 ++++++++++++++++++++++++++++
+ 1 file changed, 28 insertions(+)
+
+commit 9eaecd260c gnu: Add perl-soap-lite. / 2023-06-04
+ gnu/packages/perl-web.scm | 42 ++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 42 insertions(+)
+
+commit a1f211c9c5 gnu: Add perl-io-sessiondata. / 2023-06-04
+ gnu/packages/perl-web.scm | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+
+commit b2de344cbf gnu: Add perl-gravatar-url. / 2023-06-04
+ gnu/packages/perl-web.scm | 26 ++++++++++++++++++++++++++
+ 1 file changed, 26 insertions(+)
+
+commit d2b7d14db4 gnu: Add perl-text-xslate. / 2023-06-04
+ gnu/packages/perl.scm | 26 ++++++++++++++++++++++++++
+ 1 file changed, 26 insertions(+)
+
+commit d356558198 gnu: Add perl-user. / 2023-06-04
+ gnu/packages/perl.scm | 22 ++++++++++++++++++++++
+ 1 file changed, 22 insertions(+)
+
+commit 30ddcc7929 gnu: Add perl-time-warp. / 2023-06-04
+ gnu/packages/perl.scm | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+
+commit 58b98edb18 gnu: Add perl-tie-hash-method. / 2023-06-04
+ gnu/packages/perl.scm | 22 ++++++++++++++++++++++
+ 1 file changed, 22 insertions(+)
+
+commit 1f96da1f49 gnu: Add perl-text-tabulardisplay. / 2023-06-04
+ gnu/packages/perl.scm | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+
+commit 10f90b9d02 gnu: Add perl-text-reform. / 2023-06-04
+ gnu/packages/perl.scm | 25 +++++++++++++++++++++++++
+ 1 file changed, 25 insertions(+)
+
+commit 39853d0ef5 gnu: Add perl-text-recordparser. / 2023-06-04
+ gnu/packages/perl.scm | 37 +++++++++++++++++++++++++++++++++++++
+ 1 file changed, 37 insertions(+)
+
+commit fd9599f2b9 gnu: Add perl-text-iconv. / 2023-06-04
+ gnu/packages/perl.scm | 23 +++++++++++++++++++++++
+ 1 file changed, 23 insertions(+)
+
+commit 90cb69dc92 gnu: Add perl-text-brew. / 2023-06-04
+ gnu/packages/perl.scm | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+
+commit c08ab74432 gnu: perl-text-balanced: Update to 1.75. / 2023-06-04
+ gnu/packages/perl.scm | 26 ++++++++++++++++++++++++++
+ 1 file changed, 26 insertions(+)
+
+commit abffb41c09 gnu: perl-sub-quote: Update to 2.006008. / 2023-06-04
+ gnu/packages/perl.scm | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 22a3211d24 gnu: Add perl-spreadsheet-parseexcel. / 2023-06-04
+ gnu/packages/perl.scm | 39 +++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 39 insertions(+)
+
+commit 7cff75e7c0 gnu: Add perl-safe-hole. / 2023-06-04
+ gnu/packages/perl.scm | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+
+commit 9af8ed27da gnu: Add perl-package-variant. / 2023-06-04
+ gnu/packages/perl.scm | 30 ++++++++++++++++++++++++++++++
+ 1 file changed, 30 insertions(+)
+
+commit a6907b0da0 gnu: Add perl-mldbm. / 2023-06-04
+ gnu/packages/perl.scm | 23 +++++++++++++++++++++++
+ 1 file changed, 23 insertions(+)
+
+commit 8444ae7966 gnu: Add perl-meta-builder. / 2023-06-04
+ gnu/packages/perl.scm | 26 ++++++++++++++++++++++++++
+ 1 file changed, 26 insertions(+)
+
+commit aab9393372 gnu: Add perl-mail-rfc822-address. / 2023-06-04
+ gnu/packages/perl.scm | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+
+commit a830766356 gnu: Add perl-log-contextual. / 2023-06-04
+ gnu/packages/perl.scm | 25 +++++++++++++++++++++++++
+ 1 file changed, 25 insertions(+)
+
+commit 84c765e0f3 gnu: Add perl-graphviz. / 2023-06-04
+ gnu/packages/perl.scm | 30 ++++++++++++++++++++++++++++++
+ 1 file changed, 30 insertions(+)
+
+commit 7bc9a96c38 gnu: Add perl-gd. / 2023-06-04
+ gnu/packages/perl.scm | 22 ++++++++++++++++++++++
+ 1 file changed, 22 insertions(+)
+
+commit fda636721a gnu: Add perl-function-parameters. / 2023-06-04
+ gnu/packages/perl.scm | 23 +++++++++++++++++++++++
+ 1 file changed, 23 insertions(+)
+
+commit 6ca5c2e50e gnu: Add perl-file-libmagic. / 2023-06-04
+ gnu/packages/perl.scm | 25 +++++++++++++++++++++++++
+ 1 file changed, 25 insertions(+)
+
+commit bb7c2643d8 gnu: Add perl-exporter-declare. / 2023-06-04
+ gnu/packages/perl.scm | 28 ++++++++++++++++++++++++++++
+ 1 file changed, 28 insertions(+)
+
+commit c2189edbe9 gnu: Add perl-datetime-format-pg. / 2023-06-04
+ gnu/packages/perl.scm | 27 +++++++++++++++++++++++++++
+ 1 file changed, 27 insertions(+)
+
+commit 37e64bc1f7 gnu: Add perl-datetime-format-sqlite. / 2023-06-04
+ gnu/packages/perl.scm | 24 ++++++++++++++++++++++++
+ 1 file changed, 24 insertions(+)
+
+commit bed8665f69 gnu: Add perl-datetime-format-mysql. / 2023-06-04
+ gnu/packages/perl.scm | 25 +++++++++++++++++++++++++
+ 1 file changed, 25 insertions(+)
+
+commit bb933d19d4 gnu: Add perl-data-messagepack. / 2023-06-04
+ gnu/packages/perl.scm | 25 +++++++++++++++++++++++++
+ 1 file changed, 25 insertions(+)
+
+commit 376f64c116 gnu: Add perl-critic-policy-perlsecret. / 2023-06-04
+ gnu/packages/perl.scm | 26 ++++++++++++++++++++++++++
+ 1 file changed, 26 insertions(+)
+
+commit f7f26611bf gnu: Add perl-constant. / 2023-06-04
+ gnu/packages/perl.scm | 22 ++++++++++++++++++++++
+ 1 file changed, 22 insertions(+)
+
+commit 4026402553 gnu: Add perl-config-simple. / 2023-06-04
+ gnu/packages/perl.scm | 22 ++++++++++++++++++++++
+ 1 file changed, 22 insertions(+)
+
+commit 490def9394 gnu: Add perl-test-mockrandom. / 2023-06-04
+ gnu/packages/perl-check.scm | 27 +++++++++++++++++++++++++++
+ 1 file changed, 27 insertions(+)
+
+commit 95b4594a2e gnu: Add perl-test-fork. / 2023-06-04
+ gnu/packages/perl-check.scm | 23 +++++++++++++++++++++++
+ 1 file changed, 23 insertions(+)
+
+commit 2b6d46c8de gnu: Add perl-test-file-sharedir. / 2023-06-04
+ gnu/packages/perl-check.scm | 27 +++++++++++++++++++++++++++
+ 1 file changed, 27 insertions(+)
+
+commit beff6a3768 gnu: Add perl-fennec-lite. / 2023-06-04
+ gnu/packages/perl-check.scm | 23 +++++++++++++++++++++++
+ 1 file changed, 23 insertions(+)
+
+commit 39ad9e546a gnu: Add perl-test-postgresql. / 2023-06-04
+ gnu/packages/databases.scm | 32 ++++++++++++++++++++++++++++++++
+ 1 file changed, 32 insertions(+)
+
+commit 7c28b5bdb1 gnu: Add perl-sql-translator. / 2023-06-04
+ gnu/packages/databases.scm | 52 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 52 insertions(+)
+
+commit ed6b9449a1 gnu: Add perl-dbix-class-timestamp. / 2023-06-04
+ gnu/packages/databases.scm | 31 +++++++++++++++++++++++++++++++
+ 1 file changed, 31 insertions(+)
+
+commit 57c38bb103 gnu: Add perl-dbix-class-dynamicdefault. / 2023-06-04
+ gnu/packages/databases.scm | 23 +++++++++++++++++++++++
+ 1 file changed, 23 insertions(+)
+
+commit 3463ab9048 gnu: Add perl-dbicx-testdatabase. / 2023-06-04
+ gnu/packages/databases.scm | 25 +++++++++++++++++++++++++
+ 1 file changed, 25 insertions(+)
+
+commit 2e91e486d5 gnu: Add perl-dbix-simple. / 2023-06-04
+ gnu/packages/databases.scm | 26 ++++++++++++++++++++++++++
+ 1 file changed, 26 insertions(+)
+
+commit efe027b1e0 gnu: Add perl-dbix-class-deploymenthandler. / 2023-06-04
+ gnu/packages/databases.scm | 44 ++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 44 insertions(+)
+
+commit 1576768907 gnu: poetry: Update to 1.8.4. / 2024-11-25
+ gnu/packages/python-xyz.scm | 63 +++++++++++++++++++++++++++++++++++++++++---------------
+ 1 file changed, 46 insertions(+), 17 deletions(-)
+
+commit 6e312fe35e gnu: python-jsonpickle: Update to 4.0.0. / 2024-11-25
+ gnu/packages/python-web.scm | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 3a0acc79cf gnu: python-poetry-core: Update to 1.9.1. / 2024-06-14
+ gnu/packages/python-build.scm | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit d4f5e7dfe7 gnu: python-betamax: Update to 0.9.0. / 2024-06-14
+ gnu/packages/python-web.scm | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit ec9381fbe7 gnu: Add python-installer. / 2024-06-14
+ gnu/packages/python-build.scm | 23 +++++++++++++++++++++++
+ 1 file changed, 23 insertions(+)
+
+commit 16c71b7fe3 gnu: Add python-scikit-surprise. / 2024-12-03
+ gnu/packages/python-science.scm | 48 ++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 48 insertions(+)
+
+commit 191b85e8fb gnu: gauche: Fix build, enable TLS, and use gexps. / 2024-09-13
+ gnu/packages/scheme.scm | 58 ++++++++++++++++++++++++++++++----------------------------
+ 1 file changed, 30 insertions(+), 28 deletions(-)
+
+commit f9ed5788fd gnu: wireplumber: Update to 0.5.3. / 2024-06-10
+ gnu/packages/linux.scm | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit ef9a2f9e91 gnu: Add gnudatalanguage. / 2022-08-25
+ gnu/local.mk                   |  1 +
+ gnu/packages/data-language.scm | 90 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 91 insertions(+)
+
+commit 2006874c2b gnu: Add plplot. / 2022-08-25
+ gnu/packages/plotutils.scm | 51 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 51 insertions(+)
+
+commit ce2d140c5b gnu: Add nuklear. / 2024-04-03
+ gnu/packages/toolkits.scm | 49 +++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 49 insertions(+)
+
+commit 883e69cdfd services: guix: Add ‘channels’ field. / 2023-05-26
+ doc/guix.texi         | 18 +++++++++++++++++-
+ gnu/services/base.scm | 34 +++++++++++++++++++++++++++++++++-
+ 2 files changed, 50 insertions(+), 2 deletions(-)
+
+commit 36f5db706c gnu: Add python-pynrrd. / 2022-06-16
+ gnu/packages/python-science.scm | 26 ++++++++++++++++++++++++++
+ 1 file changed, 26 insertions(+)
+
+commit e71abbc643 gnu: Add python-pynetdicom. / 2022-12-03
+ gnu/packages/python-science.scm | 41 +++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 41 insertions(+)
+
+commit 2c37b33796 gnu: Add python-jsonnet. / 2022-06-15
+ gnu/packages/cpp.scm | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+commit 0dc8d4f8f0 gnu: Add plan9port. / 2023-06-05
+ gnu/packages/plan9.scm | 113 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 113 insertions(+)
+
+commit 748665f49a gnu: Add le-biniou. / 2023-05-31
+ gnu/packages/music.scm | 55 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 55 insertions(+)
+
+commit c5885b056b gnu: Add le-biniou-data. / 2023-05-31
+ gnu/packages/music.scm | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+
+commit e920bfdb0b gnu: Add ulfius. / 2023-05-31
+ gnu/packages/web.scm | 59 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 59 insertions(+)
+
+commit c46ea1826a gnu: Add yder. / 2023-05-31
+ gnu/packages/web.scm | 37 +++++++++++++++++++++++++++++++++++++
+ 1 file changed, 37 insertions(+)
+
+commit 73e7844c9c gnu: Add orcania. / 2023-05-31
+ gnu/packages/web.scm | 37 +++++++++++++++++++++++++++++++++++++
+ 1 file changed, 37 insertions(+)
+
+commit aea081e87d gnu: Add subunit. / 2023-05-31
+ gnu/packages/check.scm | 33 +++++++++++++++++++++++++++++++++
+ 1 file changed, 33 insertions(+)
+
+commit 76b7c50645 gnu: Add s7. / 2023-04-25
+ gnu/packages/lisp.scm | 29 +++++++++++++++++++++++++++++
+ 1 file changed, 29 insertions(+)
+
+commit 1569f7d77e gnu: Add s7-bootstrap. / 2023-04-25
+ gnu/packages/lisp.scm | 102 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 101 insertions(+), 1 deletion(-)
+
+commit f2f8e2fa2f gnu: notcurses: Update to 3.0.9. / 2023-04-25
+ gnu/packages/notcurses.scm | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 297ba5c15a gnu: Add python-vulture. / 2023-05-23
+ gnu/packages/python-check.scm | 33 +++++++++++++++++++++++++++++++++
+ 1 file changed, 33 insertions(+)
+
+commit 5a6acda4fb teams: Correct chemistry.scm typo. / 2023-04-27
+ etc/teams.scm.in | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 5585fbbfd0 gnu: dwl: Update to 0.4. / 2023-05-05
+ gnu/packages/wm.scm | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 4c3532d7ab gnu: Add emacs-next-pgtk-xwidgets. / 2023-04-30
+ gnu/packages/emacs.scm | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+
+commit a50f0dc5ca gnu: schismtracker: Update to 20221201. / 2023-04-18
+ gnu/packages/music.scm | 25 +++++++++++++------------
+ 1 file changed, 13 insertions(+), 12 deletions(-)
+
+commit 2662f074a0 gnu: Add clog. / 2023-04-07
+ gnu/local.mk                                     |  1 +
+ gnu/packages/parallel.scm                        | 29 ++++++++++++
+ gnu/packages/patches/clog-fix-shared-build.patch | 85 +++++++++++++++++++++++++++++++++++
+ 3 files changed, 115 insertions(+)
+
+commit 8b2d0654ef gnu: Add emacs-totp. / 2023-04-10
+ gnu/packages/emacs-xyz.scm | 24 ++++++++++++++++++++++++
+ 1 file changed, 24 insertions(+)
+
+commit 1e5ef8763f gnu: python-breathe: Update to 4.35.0. / 2023-04-07
+ gnu/packages/sphinx.scm | 31 ++++++++++++++++++++-----------
+ 1 file changed, 20 insertions(+), 11 deletions(-)
+
+commit 35002a35f6 gnu: zrythm: Update to 1.0.0-beta.4.5.62. / 2023-02-11
+ gnu/packages/music.scm | 146 ++++++++++++++++++++++++++++++++++++++----------------------
+ 1 file changed, 93 insertions(+), 53 deletions(-)
+
+commit ae6925b60b gnu: libaudec: Update to 0.3.4. / 2023-02-11
+ gnu/packages/audio.scm | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 4029832b2d gnu: Add zix. / 2023-02-11
+ gnu/packages/datastructures.scm | 40 ++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 40 insertions(+)
+
+commit 40d39ac510 gnu: Add libpanel. / 2023-02-11
+ gnu/packages/gtk.scm | 35 +++++++++++++++++++++++++++++++++++
+ 1 file changed, 35 insertions(+)
+
+commit 9a1d8cd652 gnu: zrythm: Update to 1.0.0-beta.4.5.62. / 2023-02-11
+ gnu/packages/music.scm | 146 ++++++++++++++++++++++++++++++++++++++----------------------
+ 1 file changed, 93 insertions(+), 53 deletions(-)
+
+commit b6a31d56a3 gnu: libaudec: Update to 0.3.4. / 2023-02-11
+ gnu/packages/audio.scm | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit d2e932cd45 gnu: Add zix. / 2023-02-11
+ gnu/packages/datastructures.scm | 40 ++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 40 insertions(+)
+
+commit d7e8f52f77 gnu: Add libpanel. / 2023-02-11
+ gnu/packages/gtk.scm | 35 +++++++++++++++++++++++++++++++++++
+ 1 file changed, 35 insertions(+)
+
+commit 31bed61b82 gnu: Add parform. / 2023-03-21
+ gnu/packages/algebra.scm | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+
+commit 15ee08ebf2 gnu: Add form. / 2023-03-21
+ gnu/packages/algebra.scm | 63 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 63 insertions(+)
+
+commit 8b85aeaa08 gnu: Add samplebrain. / 2023-03-21
+ gnu/packages/music.scm | 35 +++++++++++++++++++++++++++++++++++
+ 1 file changed, 35 insertions(+)
+
+commit 2135f69dc0 ui: format 'display-hint' output when no arguments are passed. / 2023-03-16
+ guix/ui.scm | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 8e3dfb3d6d build: Correct guix_system on musl libc distros. / 2023-02-01
+ m4/guix.m4 | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit a70b9fb319 lint: Check that python-pre-commit is not an input. / 2023-03-11
+ guix/lint.scm | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 831baaf81e gnu: python-pre-commit: Replace with pre-commit. / 2023-03-11
+ gnu/packages/python-xyz.scm | 29 +----------------------------
+ 1 file changed, 1 insertion(+), 28 deletions(-)
+
+commit 5c976c6b45 gnu: python-sphinxcontrib-apidoc: Remove python-pre-commit. / 2023-03-11
+ gnu/packages/sphinx.scm | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit dcc3bebfaf gnu: mdpo: Remove python-pre-commit. / 2023-03-11
+ gnu/packages/gettext.scm | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 57a94b9eff gnu: python-pytest-regressions: Remove python-pre-commit. / 2023-03-11
+ gnu/packages/check.scm | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 72b1fe77b2 gnu: scvelo: Remove python-pre-commit. / 2023-03-11
+ gnu/packages/bioinformatics.scm | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit ed59796de5 gnu: python-doubletdetection: Remove python-pre-commit. / 2023-03-11
+ gnu/packages/bioinformatics.scm | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+commit fb624c919f gnu: python-minikanren: Remove python-pre-commit. / 2023-03-11
+ gnu/packages/python-xyz.scm | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+commit f19ab875ff gnu: python-apispec-webframeworks: Remove python-pre-commit. / 2023-03-11
+ gnu/packages/python-xyz.scm | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 6181cce732 gnu: python-apispec: Remove python-pre-commit. / 2023-03-11
+ gnu/packages/python-xyz.scm | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 2cfb7dbd2f gnu: python-marshmallow-jsonapi: Remove python-pre-commit. / 2023-03-11
+ gnu/packages/python-xyz.scm | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit a83f3a13e6 gnu: python-marshmallow: Remove python-pre-commit. / 2023-03-11
+ gnu/packages/python-xyz.scm | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit d456ced2d4 gnu: python-pyjwt: Remove python-pre-commit. / 2023-03-11
+ gnu/packages/python-xyz.scm | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 622b92d935 gnu: python-bidict: Remove python-pre-commit. / 2023-03-11
+ gnu/packages/python-xyz.scm | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 64d69c3f79 gnu: python-jupytext: Replace python-pre-commit with pre-commit. / 2023-03-11
+ gnu/packages/python-xyz.scm | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 94c898cd9b gnu: pre-commit: Update to 3.1.1. / 2023-03-11
+ gnu/packages/version-control.scm | 26 +++++++++++++++++++++-----
+ 1 file changed, 21 insertions(+), 5 deletions(-)
+
+commit e152e861b8 gnu: Add 9base. / 2023-02-24
+ gnu/packages/suckless.scm | 37 +++++++++++++++++++++++++++++++++++++
+ 1 file changed, 37 insertions(+)
+
+commit 344a0d2c11 gnu: Add 9yacc. / 2023-02-24
+ gnu/packages/suckless.scm | 31 +++++++++++++++++++++++++++++++
+ 1 file changed, 31 insertions(+)
+
+commit b924d89fce gnu: Add lib9. / 2023-02-24
+ gnu/packages/suckless.scm | 72 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 72 insertions(+)
+
+commit 8935e41952 gnu: r-mapproj: Correct license field to lpl1.02. / 2023-02-24
+ gnu/packages/cran.scm | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+commit 6529534587 import: Add EUPL 1.1 to the SPDX license name converter. / 2023-02-24
+ guix/import/utils.scm | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit ea2ff18238 licenses: Add LPL 1.02 (Lucent Public Licence). / 2023-02-24
+ guix/import/utils.scm | 1 +
+ guix/licenses.scm     | 6 ++++++
+ 2 files changed, 7 insertions(+)
+
+commit e8c25e389d gnu: libcap: Add bsd-3 license. / 2023-03-04
+ gnu/packages/linux.scm | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 9c69b322ea gnu: libsndfile: Correct license. / 2023-03-04
+ gnu/packages/pulseaudio.scm | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit b2200e3488 gnu: grimshot: Correct man page path. / 2023-02-28
+ gnu/packages/wm.scm | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 2e6501b03c gnu: Add emacs-jabber. / 2023-02-03
+ gnu/packages/emacs-xyz.scm | 37 +++++++++++++++++++++++++++++++++++++
+ 1 file changed, 37 insertions(+)
+
+commit da0f959e6f gnu: Add emacs-srv. / 2023-02-03
+ gnu/packages/emacs-xyz.scm | 23 +++++++++++++++++++++++
+ 1 file changed, 23 insertions(+)
+
+commit dd3ec180f8 gnu: Add emacs-hexrgb. / 2023-02-01
+ gnu/packages/emacs-xyz.scm | 26 ++++++++++++++++++++++++++
+ 1 file changed, 26 insertions(+)
+
+commit 93e683a952 scripts: repl: Add -i, --interactive flag. / 2022-12-03
+ doc/guix.texi         | 13 +++++++++++++
+ guix/scripts/repl.scm |  8 +++++++-
+ 2 files changed, 20 insertions(+), 1 deletion(-)
+
+commit abd9569571 scripts: repl: Add --list-types flag. / 2022-12-03
+ doc/guix.texi         | 4 ++++
+ guix/scripts/repl.scm | 6 ++++++
+ 2 files changed, 10 insertions(+)
+
+commit e24b9b42bc gnu: Add python-pydicom. / 2022-06-15
+ gnu/packages/python-science.scm | 51 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 51 insertions(+)
+
+commit 15caeb745c gnu: Add gdcm. / 2022-06-15
+ gnu/packages/bioinformatics.scm | 37 +++++++++++++++++++++++++++++++++++++
+ 1 file changed, 37 insertions(+)
+
+commit 392dfb5dab gnu: Add csfml. / 2022-11-16
+ gnu/packages/game-development.scm | 28 ++++++++++++++++++++++++++++
+ 1 file changed, 28 insertions(+)
+
+commit afa5fa8d5b gnu: Add xkcdpass. / 2022-11-09
+ gnu/packages/password-utils.scm | 40 ++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 40 insertions(+)
+
+commit 50546f9c0c licenses: Add EUPL 1.1. / 2022-11-09
+ guix/licenses.scm | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+commit 7d1add80b2 gnu: Add safeint. / 2022-11-04
+ gnu/packages/cpp.scm | 39 +++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 39 insertions(+)
+
+commit 31e46e71e0 gnu: Add uxn. / 2022-11-02
+ gnu/packages/emulators.scm | 44 ++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 44 insertions(+)
+
+commit 7a4f858f39 etc: teams: Add help information for commands. / 2022-10-27
+ etc/teams.scm.in | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+commit d0376f6718 system: install: Do not load amdgpu in the installer image. / 2022-09-13
+ gnu/system/install.scm | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit e05e5342a0 gnu: Add pn. / 2022-08-11
+ gnu/packages/messaging.scm | 31 +++++++++++++++++++++++++++++++
+ 1 file changed, 31 insertions(+)
+
+commit 8956fba989 gnu: Add svkbd. / 2022-05-28
+ gnu/packages/suckless.scm | 37 +++++++++++++++++++++++++++++++++++++
+ 1 file changed, 37 insertions(+)
+
+commit 68edaf467f utils: Add as-for-target. / 2022-06-25
+ guix/utils.scm | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+commit 97285a431b gnu: Add grimshot. / 2022-07-26
+ gnu/packages/wm.scm | 43 +++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 43 insertions(+)
+
+commit ecb91c993d gnu: libphonenumber: Build reproducibly. / 2022-07-19
+ gnu/local.mk                                               |  1 +
+ gnu/packages/messaging.scm                                 |  3 ++-
+ .../patches/libphonenumber-reproducible-build.patch        | 25 +++++++++++++++++++++++++
+ 3 files changed, 28 insertions(+), 1 deletion(-)
+
+commit f2e6891f7d gnu: Add python-bsdiff4. / 2022-07-09
+ gnu/packages/python-xyz.scm | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+
+commit 95acd67dd3 system: Add -I, --list-installed option. / 2022-07-13
+ doc/guix.texi           | 12 +++++++++++
+ guix/scripts/system.scm | 67 ++++++++++++++++++++++++++++++++++++++++++------------------
+ 2 files changed, 59 insertions(+), 20 deletions(-)
+
+commit 55725724dd home: Add -I, --list-installed option. / 2022-07-12
+ doc/guix.texi            | 18 ++++++++++++++++-
+ guix/scripts/home.scm    | 64 +++++++++++++++++++++++++++++++++++++++++------------------
+ guix/scripts/package.scm | 33 ++++++++++++++++++------------
+ guix/utils.scm           |  6 +++---
+ 4 files changed, 85 insertions(+), 36 deletions(-)
+
+commit 486251d440 gnu: Add python-deepdish. / 2022-06-24
+ gnu/packages/python-science.scm | 36 ++++++++++++++++++++++++++++++++++++
+ 1 file changed, 36 insertions(+)
+
+commit 8d0e696243 gnu: Add python-sendgrid. / 2022-06-25
+ gnu/packages/python-web.scm | 25 +++++++++++++++++++++++++
+ 1 file changed, 25 insertions(+)
+
+commit 24dba9c5e7 gnu: Add python-http-client. / 2022-06-24
+ gnu/packages/python-web.scm | 23 +++++++++++++++++++++++
+ 1 file changed, 23 insertions(+)
+
+commit 53be886d18 gnu: Add python-starkbank-ecdsa. / 2022-06-25
+ gnu/packages/python-crypto.scm | 27 +++++++++++++++++++++++++++
+ 1 file changed, 27 insertions(+)
+
+commit 0de3d44a16 gnu: Add guile-termios. / 2022-06-16
+ gnu/packages/guile-xyz.scm | 42 ++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 42 insertions(+)
+
+commit e56f2cab60 gnu: Add guile-tap. / 2022-06-16
+ gnu/packages/guile-xyz.scm | 42 ++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 42 insertions(+)
+
+commit 7041fe0646 packages: Add 'specifications->packages'. / 2022-05-27
+ gnu/packages.scm             | 11 ++++++++++-
+ guix/scripts/home/import.scm |  4 ++--
+ tests/home-import.scm        | 13 +++++--------
+ 3 files changed, 17 insertions(+), 11 deletions(-)
+
+commit 7905b901a2 gnu: Add nitrocli. / 2021-05-31
+ gnu/packages/security-token.scm | 46 ++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 46 insertions(+)
+
+commit 3463559d55 gnu: Add rust-base32-0.4. / 2021-05-31
+ gnu/packages/crates-io.scm | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+
+commit add0c5f2b1 gnu: Add rust-envy-0.4. / 2021-05-31
+ gnu/packages/crates-io.scm | 24 ++++++++++++++++++++++++
+ 1 file changed, 24 insertions(+)
+
+commit 7b5f5aa82b gnu: Add rust-merge-0.1. / 2021-06-05
+ gnu/packages/crates-io.scm | 23 +++++++++++++++++++++++
+ 1 file changed, 23 insertions(+)
+
+commit 9c92fb862d gnu: Add rust-merge-derive-0.1. / 2021-06-05
+ gnu/packages/crates-io.scm | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+
+commit ed30001472 gnu: Add rust-nitrokey-0.9. / 2021-05-31
+ gnu/packages/crates-io.scm | 90 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 90 insertions(+)
+
+commit 51f5292014 gnu: Add rust-progressing-3. / 2021-05-31
+ gnu/packages/crates-io.scm | 23 +++++++++++++++++++++++
+ 1 file changed, 23 insertions(+)
+
+commit 38233e745e gnu: rust-structopt-0.3: Update to 0.3.21. / 2021-05-31
+ gnu/packages/crates-io.scm | 21 +++++++++++----------
+ 1 file changed, 11 insertions(+), 10 deletions(-)
+
+commit febfd4ce0d gnu: rust-structopt-derive-0.4: Update to 0.4.14. / 2021-05-31
+ gnu/packages/crates-io.scm | 50 +++++++++++++++++++++++++-------------------------
+ 1 file changed, 25 insertions(+), 25 deletions(-)</pre>
+</div>
+</div>
+</div>
+</body>
+</html>
