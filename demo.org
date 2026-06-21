@@ -6,6 +6,17 @@
 
 Past [[https://en.wikipedia.org/wiki/Demoscene][demoscene]] releases are archived here.
 
+** @party 2026
+
+title: Popsicle Ad\\
+compo: Combined graphics (ANSI) - 2nd
+
+#+begin_export html
+<a href="/archive/demo/popsicle-ad/popsicle-ad-final.png">
+<img width=50% src="/archive/demo/popsicle-ad/popsicle-ad-final.png">
+</a>
+#+end_export
+
 ** [[https://www.demosplash.org/][Demosplash]] 2025
 
 title: Welcome to the Osgood Library\\
@@ -16,7 +27,6 @@ compo: ASCII/ANSI art - 2nd
 <img width=50% src="/archive/demo/osgood/thumbnail.png"></a>
 #+end_export
 [[./archive/demo/osgood/index.html][Click here to start.]]\\
-Will not display correctly on mobile devices.
 
 ** [[http://atparty-demoscene.net/][@party]] 2025
 
