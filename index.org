@@ -4,14 +4,14 @@
 
 * Antero Mejr
 
-I am a second-year computer science PhD student researching [[https://en.wikipedia.org/wiki/Formal_verification][formal verification]]
+I am a third-year computer science PhD student researching [[https://en.wikipedia.org/wiki/Formal_verification][formal verification]]
 for scientific software with the [[https://tupl.cs.tufts.edu/][TuPL group]].
 
 ** work
 
 - academic publications:
   + [[./archive/papers/dafnympi.pdf][DafnyMPI: A Dafny Library for Verifying Message-Passing Concurrent Programs]].
-    * Presented at [[https://popl26.sigplan.org/][POPL 2026]].
+    Presented at [[https://popl26.sigplan.org/][POPL 2026]].
 
 - scientific software:
   + [[https://www.youtube.com/watch?v=MaZmCh_SydQ][HiRise]], [[https://www.youtube.com/watch?v=dyqKSq5eo2s][LineUP]], [[https://www.youtube.com/watch?v=fTjYj1BX7cI][InReach]] CT scanners
@@ -27,6 +27,8 @@ for scientific software with the [[https://tupl.cs.tufts.edu/][TuPL group]].
 - [[./demo.org][demos]]
 
 ** links
+
+email: [[mailto:mailDELETEME@antr.me][mail@[this-domain]​]]
 
 These external links may have outdated or incorrect info.
 
