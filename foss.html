@@ -55,7 +55,6 @@ scientific software, writing, etc." />
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
   pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-c:before { content: 'C'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -70,7 +69,7 @@ scientific software, writing, etc." />
   pre.src-haskell:before { content: 'Haskell'; }
   pre.src-hledger:before { content: 'hledger'; }
   pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'JavaScript'; }
+  pre.src-js:before { content: 'Javascript'; }
   pre.src-latex:before { content: 'LaTeX'; }
   pre.src-ledger:before { content: 'Ledger'; }
   pre.src-lisp:before { content: 'Lisp'; }
@@ -209,38 +208,15 @@ a{color:inherit}</style>
 <div class="outline-text-2" id="text-org8313a15">
 <p>
 If you encounter issues with my code in a free software package then you are
-welcome to email me. The address is <code>mail</code> at [this website].
+welcome to email me at <a href="mailto:mailDELETEME@antr.me">mail@[this-domain]​</a>.
 </p>
 
-<p>Report generated on 2026-05-01 using <a href="https://antr.me/archive/snippets/git-contrib.py">git-contrib.py</a></p>
+<p>Report generated on 2026-09-09 using <a href="https://antr.me/archive/snippets/git-contrib.py">git-contrib.py</a></p>
 <h3>Total</h3>
-<p>Commits: 247<br>Lines added: 8,956<br>Lines removed: 1,376</p><h3>Gauche</h3>
-<p><a href="https://github.com/shirok/Gauche">https://github.com/shirok/Gauche</a><br>Language: Scheme</p>
-<pre>commit 44c680e80 Add SRFI 253 - type checking (#1240) / 2026-03-18
- doc/modsrfi.texi                | 101 ++++++++++++++++++++-
- lib/srfi/253.scm                | 247 +++++++++++++++++++++++++++++++++++++++++++++++++++
- tests/include/srfi-253-test.scm | 234 ++++++++++++++++++++++++++++++++++++++++++++++++
- tests/srfi.scm                  |  13 +++
- 4 files changed, 593 insertions(+), 2 deletions(-)
-
-commit fa75d3d43 Make SRFI 64 test-group set up a runner if needed / 2025-01-19
- lib/srfi/64.scm | 13 +++++++------
- 1 file changed, 7 insertions(+), 6 deletions(-)
-
-commit d16e75c66 Add SRFI-138's compile-r7rs / 2024-05-12
- doc/program.texi               |  10 +++++
- lib/Makefile.in                |   2 +
- lib/gauche/cgen/standalone.scm |  13 ++++--
- lib/tools/compile-r7rs         | 123 ++++++++++++++++++++++++++++++++++++++++++++++++++++
- src/core.c                     |   1 +
- src/srfis.scm                  |   8 ++++
- 6 files changed, 154 insertions(+), 3 deletions(-)
-
-commit 2418a7217 Add SRFI 215 - Central Log Exchange / 2024-03-13
- doc/modsrfi.texi | 124 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- lib/srfi/215.scm | 116 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- 2 files changed, 240 insertions(+)</pre><h3>emacs</h3>
-<p><a href="https://github.com/emacs-mirror/emacs">https://github.com/emacs-mirror/emacs</a><br>Language: Lisp</p>
+<p>Commits: 292<br>Lines added: 11,403<br>Lines removed: 2,050</p><h3>emacs</h3>
+<p><a href="https://github.com/emacs-mirror/emacs">https://github.com/emacs-mirror/emacs</a><br>
+Language: Lisp<br>
+14 commits, 212 insertions(+), 36 deletions(-)</p>
 <pre>commit 5979d17ea94 Fix index error when checking edited bug reports / 2025-07-26
  lisp/mail/emacsbug.el | 17 ++++++++++-------
  1 file changed, 10 insertions(+), 7 deletions(-)
@@ -270,11 +246,11 @@ commit 7d41a23ad3b Allow viewing .six images via image-convert / 2023-05-15
  lisp/image.el | 2 +-
  2 files changed, 2 insertions(+), 1 deletion(-)
 
-commit 225710ba79c Add file completion for "git blame" to pcomplete / 2024-01-04
+commit 225710ba79c Add file completion for &quot;git blame&quot; to pcomplete / 2024-01-04
  lisp/pcmpl-git.el | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-commit cfc796f6f24 Add completion for 'doas' to pcomplete / 2023-10-15
+commit cfc796f6f24 Add completion for &#x27;doas&#x27; to pcomplete / 2023-10-15
  etc/NEWS           | 4 ++++
  lisp/pcmpl-unix.el | 8 ++++++++
  2 files changed, 12 insertions(+)
@@ -303,12 +279,41 @@ commit df6cc4d33b6 eww: Enable completion in URL/keyword prompt. / 2023-04-12
  lisp/net/eww.el | 16 ++++++++++++----
  2 files changed, 17 insertions(+), 4 deletions(-)
 
-commit ebac67129e8 eshell: Add 'rgrep' builtin / 2023-03-24
+commit ebac67129e8 eshell: Add &#x27;rgrep&#x27; builtin / 2023-03-24
  doc/misc/eshell.texi   |  2 ++
  etc/NEWS               |  5 +++++
  lisp/eshell/em-unix.el | 11 ++++++++---
- 3 files changed, 15 insertions(+), 3 deletions(-)</pre><h3>geiser</h3>
-<p><a href="https://gitlab.com/emacs-geiser/geiser">https://gitlab.com/emacs-geiser/geiser</a><br>Language: Lisp</p>
+ 3 files changed, 15 insertions(+), 3 deletions(-)</pre><h3>gauche</h3>
+<p><a href="https://github.com/shirok/Gauche">https://github.com/shirok/Gauche</a><br>
+Language: Scheme<br>
+4 commits, 994 insertions(+), 11 deletions(-)</p>
+<pre>commit 44c680e80 Add SRFI 253 - type checking (#1240) / 2026-03-18
+ doc/modsrfi.texi                | 101 +++++++++++++++++++++++++-
+ lib/srfi/253.scm                | 247 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ tests/include/srfi-253-test.scm | 234 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ tests/srfi.scm                  |  13 ++++
+ 4 files changed, 593 insertions(+), 2 deletions(-)
+
+commit fa75d3d43 Make SRFI 64 test-group set up a runner if needed / 2025-01-19
+ lib/srfi/64.scm | 13 +++++++------
+ 1 file changed, 7 insertions(+), 6 deletions(-)
+
+commit d16e75c66 Add SRFI-138&#x27;s compile-r7rs / 2024-05-12
+ doc/program.texi               |  10 ++++++
+ lib/Makefile.in                |   2 ++
+ lib/gauche/cgen/standalone.scm |  13 +++++--
+ lib/tools/compile-r7rs         | 123 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ src/core.c                     |   1 +
+ src/srfis.scm                  |   8 +++++
+ 6 files changed, 154 insertions(+), 3 deletions(-)
+
+commit 2418a7217 Add SRFI 215 - Central Log Exchange / 2024-03-13
+ doc/modsrfi.texi | 124 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ lib/srfi/215.scm | 116 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 240 insertions(+)</pre><h3>geiser</h3>
+<p><a href="https://codeberg.org/geiser/geiser">https://codeberg.org/geiser/geiser</a><br>
+Language: Lisp<br>
+6 commits, 140 insertions(+), 24 deletions(-)</p>
 <pre>commit 32196db Improve geiser-repl-superparen-mode compatibility / 2024-09-07
  elisp/geiser-repl.el | 7 ++++++-
  1 file changed, 6 insertions(+), 1 deletion(-)
@@ -333,8 +338,17 @@ commit dd81026 Correct typo that breaks geiser-repl-autoeval-mode. / 2023-05-02
 commit 7e6e05b Add geiser-repl-autoeval-mode minor mode. / 2023-04-08
  elisp/geiser-mode.el |  2 ++
  elisp/geiser-repl.el | 57 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- 2 files changed, 59 insertions(+)</pre><h3>hare</h3>
-<p><a href="https://git.sr.ht/~sircmpwn/hare">https://git.sr.ht/~sircmpwn/hare</a><br>Language: Hare</p>
+ 2 files changed, 59 insertions(+)</pre><h3>gnu_elpa</h3>
+<p><a href="https://github.com/emacsmirror/gnu_elpa">https://github.com/emacsmirror/gnu_elpa</a><br>
+Language: Lisp<br>
+1 commit, 29 insertions(+), 6 deletions(-)</p>
+<pre>commit a693259dde csv-mode.el: Respect quoted fields when sorting numerically / 2026-08-30
+ csv-mode-tests.el | 18 ++++++++++++++++++
+ csv-mode.el       | 17 +++++++++++------
+ 2 files changed, 29 insertions(+), 6 deletions(-)</pre><h3>hare</h3>
+<p><a href="https://git.sr.ht/~sircmpwn/hare">https://git.sr.ht/~sircmpwn/hare</a><br>
+Language: Hare<br>
+2 commits, 5 insertions(+), 5 deletions(-)</p>
 <pre>commit 78fc925c time::chrono: allow /etc/localtime to be a file / 2022-07-07
  time/chrono/timezone.ha | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
@@ -342,11 +356,398 @@ commit 7e6e05b Add geiser-repl-autoeval-mode minor mode. / 2023-04-08
 commit 1db5f9b5 tests: skip NaN sign-related complex tests / 2022-06-27
  math/complex/+test.ha | 8 ++++----
  1 file changed, 4 insertions(+), 4 deletions(-)</pre><h3>org-mode</h3>
-<p><a href="https://git.sr.ht/~bzg/org-mode">https://git.sr.ht/~bzg/org-mode</a><br>Language: Lisp</p>
-<pre>commit 478576749 Move files when using `org-babel-tangle-publish' / 2023-11-17
+<p><a href="https://git.sr.ht/~bzg/org-mode">https://git.sr.ht/~bzg/org-mode</a><br>
+Language: Lisp<br>
+1 commit, 4 insertions(+), 1 deletions(-)</p>
+<pre>commit 478576749 Move files when using `org-babel-tangle-publish&#x27; / 2023-11-17
  lisp/ob-tangle.el | 5 ++++-
- 1 file changed, 4 insertions(+), 1 deletion(-)</pre><h3>srfi-44</h3>
-<p><a href="https://github.com/scheme-requests-for-implementation/srfi-44">https://github.com/scheme-requests-for-implementation/srfi-44</a><br>Language: Scheme</p>
+ 1 file changed, 4 insertions(+), 1 deletion(-)</pre><h3>srfi-252</h3>
+<p><a href="https://github.com/scheme-requests-for-implementation/srfi-252">https://github.com/scheme-requests-for-implementation/srfi-252</a><br>
+Language: Scheme<br>
+91 commits, 2,418 insertions(+), 668 deletions(-)</p>
+<pre>commit 4d32ebf Name prop test in first example / 2024-04-04
+ srfi-252.html | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit bcf834b Mention how to name property tests / 2024-04-04
+ srfi-252.html | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+commit 24d563b Allow testing procedures to be macros / 2024-04-04
+ srfi-252.html | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+commit c08fc51 Fix exact-integer-complex-generator spec wording / 2024-03-22
+ srfi-252.html | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+commit 475f749 Remove SRFI 36/39 dependencies in tests / 2024-03-21
+ property-test-tests.scm | 12 +++++++-----
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+
+commit f348da7 Simplify wording for shrinking / 2024-03-21
+ srfi-252.html | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+commit 40800d8 Mention test suite / 2024-03-14
+ srfi-252.html | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+commit 00b323a Add note about shrinking / 2024-03-11
+ srfi-252.html | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+commit ed7022a Add missing &lt;/p&gt; tags. / 2024-03-11
+ srfi-252.html | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit c61b7ff Fix spec for generator exhaustion in test-property / 2024-03-13
+ srfi-252.html | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit d74cb36 Stricter specification of (symbol-generator) / 2024-03-08
+ srfi-252.html | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit 8aef8d0 Correct typo in sample implementation / 2024-03-08
+ property-test.sld | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 1ed2df0 Correct min-inexact value for ieee-float feature / 2024-03-08
+ property-test.sld | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit bd1bcce Clarify sentence / 2024-03-08
+ srfi-252.html | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit 6d02ac2 Update sample implementation to match SRFI / 2024-03-08
+ property-test.sld | 63 ++++++++++++++++++++++++++++++++++++++-------------------------
+ 1 file changed, 38 insertions(+), 25 deletions(-)
+
+commit 03024d3 Consolidate acknowledgements section / 2024-03-08
+ srfi-252.html | 8 ++------
+ 1 file changed, 2 insertions(+), 6 deletions(-)
+
+commit 56432d8 Mention optional SRFI 144 dependency / 2024-03-08
+ srfi-252.html | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 01985e8 Remove references to exact -0 from SRFI / 2024-03-08
+ srfi-252.html | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+commit e78168e Mention implementation-defined generator ranges / 2024-03-08
+ srfi-252.html | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+commit 85f80cf Don&#x27;t specify generating &quot;\0&quot; in SRFI document / 2024-03-08
+ srfi-252.html | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+commit 074a34b Improve wording / 2024-03-08
+ srfi-252.html | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit 5e29fdf Remove unnecessary word in abstract / 2024-03-08
+ index.html    | 2 +-
+ srfi-252.html | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit e42920c Fix unclear wording in Rationale / 2024-03-01
+ srfi-252.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 58041af Remove issues section / 2024-03-01
+ srfi-252.html | 16 ----------------
+ 1 file changed, 16 deletions(-)
+
+commit f7535de Make the determinism tests into property tests / 2024-03-01
+ property-test-tests.scm | 16 ++++++++++------
+ 1 file changed, 10 insertions(+), 6 deletions(-)
+
+commit d1971d0 Improve exact-integer-complex-generator test / 2024-03-01
+ property-test-tests.scm | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+commit 4bae6cd Include test inputs with -0.0 for Gauche / 2024-02-14
+ property-test.sld | 20 ++++++--------------
+ 1 file changed, 6 insertions(+), 14 deletions(-)
+
+commit 940a597 Remove reference to WIP repo / 2024-02-05
+ srfi-252.html | 3 ---
+ 1 file changed, 3 deletions(-)
+
+commit 4d9eb82 Ease wording for exact-complex-generator implementation / 2024-02-05
+ srfi-252.html | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit e249953 Mention optional SRFI 143 dependency. / 2024-02-05
+ srfi-252.html | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+commit 737760e Use min/max fixnum for random integer generators / 2024-01-27
+ property-test.sld | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+commit d61dde1 Update author email address / 2024-01-26
+ property-test-tests.scm | 2 +-
+ property-test.sld       | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit c6d3ff8 Correct max char (127-&gt;128) / 2024-01-26
+ property-test.sld | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 7267b93 Format nitpick for inexact-complex generators / 2024-01-23
+ srfi-252.html | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+commit f953f6b Formatting nitpicks / 2024-01-23
+ srfi-252.html | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+
+commit b47df3a Fix overflowing &lt;pre&gt; element in pair-generator-of / 2024-01-23
+ srfi-252.html | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit af6fa8f Unused import / 2024-01-21
+ property-test-tests.scm | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 3211944 Reindent exports / 2024-01-21
+ property-test.sld | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+commit dba1f35 Prevent zero divisors when making ratios / 2024-01-21
+ property-test.sld | 28 ++++++++++++----------------
+ 1 file changed, 12 insertions(+), 16 deletions(-)
+
+commit 3b598d9 Remove exact-ratio-generator / 2024-01-21
+ property-test-tests.scm | 13 -------------
+ property-test.sld       | 17 +----------------
+ srfi-252.html           | 25 -------------------------
+ 3 files changed, 1 insertion(+), 54 deletions(-)
+
+commit 3661af6 Corrections / 2024-01-21
+ srfi-252.html | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+commit 4699ad4 More word removals / 2024-01-21
+ srfi-252.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 74248c6 Remove confusing word / 2024-01-21
+ srfi-252.html | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 3373a72 Update with new number generators and reorganize / 2024-01-21
+ srfi-252.html | 393 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-----------------------
+ 1 file changed, 281 insertions(+), 112 deletions(-)
+
+commit 966f8bb Add complex inf and nan numbers / 2024-01-21
+ property-test.sld | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+
+commit 52a219d Don&#x27;t generate ratios with zero divisor / 2024-01-20
+ property-test.sld | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+commit 0a194ed Refactor generator implementation / 2024-01-20
+ property-test-tests.scm | 103 +++++++++++++++++++++++++++++-------
+ property-test.sld       | 206 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++---------------
+ 2 files changed, 246 insertions(+), 63 deletions(-)
+
+commit 59be2a9 wording / 2024-01-20
+ srfi-252.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 785f04a Remove -nan.0 / 2024-01-18
+ property-test.sld | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 4488169 Thank mailing list contributors / 2024-01-18
+ srfi-252.html | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+commit f89048c Fix comments / 2024-01-18
+ property-test.sld | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit c665ec9 Change wording to match SRFI 64. / 2024-01-17
+ srfi-252.html | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 9aeeab2 Capitalize hex numbers (nitpick) / 2024-01-16
+ property-test.sld | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 831758a Always refer to (scheme list) as (srfi 1) / 2024-01-16
+ property-test-tests.scm | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 317d127 Simplify test-runner code / 2024-01-16
+ property-test.sld | 53 ++++++++++++++++++++++++-----------------------------
+ 1 file changed, 24 insertions(+), 29 deletions(-)
+
+commit fc66b45 Parameterize test / 2024-01-16
+ property-test-tests.scm | 13 ++++++-------
+ 1 file changed, 6 insertions(+), 7 deletions(-)
+
+commit fc8d81c Change test name / 2024-01-16
+ property-test-tests.scm | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit eaa2d6c Remove SRFI 18 test dependency / 2024-01-16
+ property-test-tests.scm | 13 ++++++-------
+ 1 file changed, 6 insertions(+), 7 deletions(-)
+
+commit 0d11477 Add non-determinism test / 2024-01-16
+ property-test-tests.scm | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+commit 60dd7f6 Add determinism test / 2024-01-16
+ property-test-tests.scm | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+commit 6596690 Reduce calls to (get-runner) / 2024-01-16
+ property-test.sld | 71 +++++++++++++++++++++++++++++++++++++----------------------------------
+ 1 file changed, 37 insertions(+), 34 deletions(-)
+
+commit 3391da3 Refactor construction of special-number / 2024-01-16
+ property-test.sld | 56 +++++++++++++++++++++++++-------------------------------
+ 1 file changed, 25 insertions(+), 31 deletions(-)
+
+commit 39743fc Add fractional i to exact-complex / 2024-01-16
+ property-test.sld | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 5002ec2 Add fractional exact complex / 2024-01-16
+ property-test.sld | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit dd62bdb Fix mistake / 2024-01-16
+ property-test.sld | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 4fff016 Add fractions to special-number / 2024-01-16
+ property-test.sld | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+commit 32abbed Use full-unicode to cond-expand max-char. / 2024-01-16
+ property-test.sld | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 985bf2b Error if using exact-complex-generator when unsupported / 2024-01-16
+ property-test.sld | 12 ++++++++----
+ srfi-252.html     |  4 ++--
+ 2 files changed, 10 insertions(+), 6 deletions(-)
+
+commit 769f80e Allow exact-complex-generator for implementations without exact-complex / 2024-01-16
+ srfi-252.html | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+
+commit 51e5f1b Small code cleanup / 2024-01-16
+ property-test-tests.scm | 13 +++----------
+ property-test.sld       |  2 +-
+ 2 files changed, 4 insertions(+), 11 deletions(-)
+
+commit 7ece1fc Update complex? to exact-complex? / 2024-01-15
+ property-test.sld | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit f66e4cf Fix char issue and clean up special sequence / 2024-01-15
+ property-test-tests.scm |  10 +++----
+ property-test.sld       | 109 ++++++++++++++++++++++++++++++++++++++++++++---------------------------
+ srfi-252.html           |   7 -----
+ 3 files changed, 72 insertions(+), 54 deletions(-)
+
+commit cf7008b Remove extraneous and incorrect info / 2024-01-14
+ srfi-252.html | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+commit 98dd708 Claify max lengths of bytevector-generator and string-generator / 2024-01-13
+ SRFI 252 Property Testing.html | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+commit b8ea8bc Don&#x27;t generate inputs for skipped tests / 2024-01-13
+ property-test-tests.scm | 15 +++++++++++++--
+ property-test.sld       | 35 +++++++++++++++++++++--------------
+ 2 files changed, 34 insertions(+), 16 deletions(-)
+
+commit e51de79 Fix my-square code example for test-property-expect-fail / 2024-01-13
+ SRFI 252 Property Testing.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 85b7921 Change word / 2024-01-13
+ SRFI 252 Property Testing.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit da9d98c Fix error in pair generator section / 2024-01-13
+ SRFI 252 Property Testing.html | 18 ++++++++++--------
+ 1 file changed, 10 insertions(+), 8 deletions(-)
+
+commit bbe21be Apply test group policy to all testing procedures / 2024-01-13
+ SRFI 252 Property Testing.html | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+commit a88acb8 Remove unused import / 2024-01-13
+ property-test.sld | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit e85923b Improve first code example (my-square) / 2024-01-13
+ SRFI 252 Property Testing.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit e7735d8 Error and wording fixes / 2024-01-13
+ SRFI 252 Property Testing.html | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+commit 95fde38 Update test values / 2024-01-13
+ property-test-tests.scm | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 57a8293 Generate empty vector / 2024-01-13
+ property-test.sld | 16 ++++++++++------
+ 1 file changed, 10 insertions(+), 6 deletions(-)
+
+commit 2e94616 Wording / 2024-01-13
+ SRFI 252 Property Testing.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 80ca74c Correct spelling of homogeneous / 2024-01-13
+ SRFI 252 Property Testing.html | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit c365f22 Change wording about generator procedures / 2024-01-13
+ SRFI 252 Property Testing.html | 65 +++++++++++++++++++++++++++++++++++------------------------------
+ 1 file changed, 35 insertions(+), 30 deletions(-)
+
+commit 139eb2a Add missing tag / 2024-01-13
+ SRFI 252 Property Testing.html | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit f67aee1 Extraneous word / 2024-01-13
+ SRFI 252 Property Testing.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit afbbbe6 Add note about SRFI-194 usage / 2024-01-13
+ SRFI 252 Property Testing.html | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+commit 9d7ae38 Initial commit / 2024-01-13
+ .gitignore                                    |   1 +
+ SRFI 252 Property Testing.html                | 668 +++++++++++++++++++++++++++++++++++++++++++++++++
+ SRFI 252 Property Testing_files/srfi-logo.svg | 257 +++++++++++++++++++
+ SRFI 252 Property Testing_files/srfi.css      |  35 +++
+ license                                       |  19 ++
+ property-test-tests.scm                       | 127 ++++++++++
+ property-test.sld                             | 227 +++++++++++++++++
+ readme.org                                    |  12 +
+ 8 files changed, 1346 insertions(+)</pre><h3>srfi-44</h3>
+<p><a href="https://github.com/scheme-requests-for-implementation/srfi-44/">https://github.com/scheme-requests-for-implementation/srfi-44/</a><br>
+Language: Scheme<br>
+8 commits, 3,086 insertions(+), 939 deletions(-)</p>
 <pre>commit 3eb9c5a Remove comment / 2025-01-20
  srfi/44.sld | 1 -
  1 file changed, 1 deletion(-)
@@ -360,38 +761,42 @@ commit e5514e9 Remove outdated comment / 2025-01-20
  1 file changed, 1 deletion(-)
 
 commit 947aa77 All tests pass, all identifiers exported / 2025-01-20
- srfi/44.sld            | 672 ++++++++++++++++++++++++++++++++++++++++++++++++++----------
- tests/test-srfi-44.scm |  86 ++++++--
+ srfi/44.sld            | 672 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++------------
+ tests/test-srfi-44.scm |  86 ++++++++--
  2 files changed, 635 insertions(+), 123 deletions(-)
 
 commit a7f6bc5 All tests pass / 2025-01-20
- srfi/44.sld            | 1230 ++++++++++++++++++++++++++++++-----------------------------
+ srfi/44.sld            | 1230 ++++++++++++++++++++++++++++++++++++-----------------------------------
  tests/test-srfi-44.scm |   11 +-
  2 files changed, 622 insertions(+), 619 deletions(-)
 
 commit 72eb379 4 tests failing / 2025-01-20
- srfi/44.sld            | 47 ++++++++++++++++++++-----------------
- tests/test-srfi-44.scm | 78 +++++++++++++++++++++++++++++++------------------------------
+ srfi/44.sld            | 47 +++++++++++++++++++++++---------------------
+ tests/test-srfi-44.scm | 78 +++++++++++++++++++++++++++++++++++++------------------------------------
  2 files changed, 65 insertions(+), 60 deletions(-)
 
 commit e4b4bb6 Tests done, 109/128 pass / 2025-01-20
  .gitignore             |   3 +-
- srfi/44.sld            | 288 ++++++++++++++++++++++++++++++++++++++++--------------------
- tests/test-srfi-44.scm | 175 ++++++++++++++++++++++++++++--------
+ srfi/44.sld            | 288 ++++++++++++++++++++++++++++++++++++++++++++++++------------------------
+ tests/test-srfi-44.scm | 175 ++++++++++++++++++++++++++++++++++----------
  3 files changed, 331 insertions(+), 135 deletions(-)
 
 commit 5124b3b Add working implementation and tests. / 2025-01-19
- srfi/256.sld           |  136 ++++++++
- srfi/44.sld            | 1050 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- tests/test-srfi-44.scm |  246 ++++++++++++++
+ srfi/256.sld           |  136 ++++++++++
+ srfi/44.sld            | 1050 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ tests/test-srfi-44.scm |  246 +++++++++++++++++
  3 files changed, 1432 insertions(+)</pre><h3>yasnippet-snippets</h3>
-<p><a href="https://github.com/AndreaCrotti/yasnippet-snippets/">https://github.com/AndreaCrotti/yasnippet-snippets/</a><br>Language: Lisp</p>
+<p><a href="https://github.com/AndreaCrotti/yasnippet-snippets/">https://github.com/AndreaCrotti/yasnippet-snippets/</a><br>
+Language: Lisp<br>
+1 commit, 19 insertions(+), 0 deletions(-)</p>
 <pre>commit 9205da0 prog-mode: Add snippets for SPDX-* comments (#512) / 2025-02-25
  snippets/prog-mode/.yas-setup.el | 7 +++++++
  snippets/prog-mode/spdxcopyright | 6 ++++++
  snippets/prog-mode/spdxlicense   | 6 ++++++
  3 files changed, 19 insertions(+)</pre><h3>guix</h3>
-<p><a href="https://codeberg.org/guix/guix-mirror">https://codeberg.org/guix/guix-mirror</a><br>Language: Scheme</p>
+<p><a href="https://codeberg.org/guix/guix">https://codeberg.org/guix/guix</a><br>
+Language: Scheme<br>
+164 commits, 4,496 insertions(+), 360 deletions(-)</p>
 <pre>commit cb0cacf206 gnu: Add netpanzer. / 2024-10-11
  gnu/packages/games.scm | 32 ++++++++++++++++++++++++++++++++
  1 file changed, 32 insertions(+)
@@ -401,7 +806,7 @@ commit 76765c89cc gnu: qemu: Add gnutls to inputs. / 2024-10-21
  1 file changed, 1 insertion(+)
 
 commit 87c928e162 gnu: Add spamassassin. / 2023-06-04
- gnu/packages/perl-web.scm | 87 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ gnu/packages/perl-web.scm | 87 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  1 file changed, 87 insertions(+)
 
 commit cca94f021f gnu: Add perl-razor2-client-agent. / 2023-06-04
@@ -413,7 +818,7 @@ commit 45f9efdbd6 gnu: Add perl-net-libidn. / 2023-06-04
  1 file changed, 22 insertions(+)
 
 commit 421d767bd4 gnu: Add perl-mail-dmarc. / 2023-06-04
- gnu/packages/perl-web.scm | 60 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+ gnu/packages/perl-web.scm | 60 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
  1 file changed, 58 insertions(+), 2 deletions(-)
 
 commit b87830d30f gnu: Add perl-net-imap-simple. / 2023-06-04
@@ -613,7 +1018,7 @@ commit efe027b1e0 gnu: Add perl-dbix-class-deploymenthandler. / 2023-06-04
  1 file changed, 44 insertions(+)
 
 commit 1576768907 gnu: poetry: Update to 1.8.4. / 2024-11-25
- gnu/packages/python-xyz.scm | 63 +++++++++++++++++++++++++++++++++++++++++---------------
+ gnu/packages/python-xyz.scm | 63 ++++++++++++++++++++++++++++++++++++++++++++++-----------------
  1 file changed, 46 insertions(+), 17 deletions(-)
 
 commit 6e312fe35e gnu: python-jsonpickle: Update to 4.0.0. / 2024-11-25
@@ -646,7 +1051,7 @@ commit f9ed5788fd gnu: wireplumber: Update to 0.5.3. / 2024-06-10
 
 commit ef9a2f9e91 gnu: Add gnudatalanguage. / 2022-08-25
  gnu/local.mk                   |  1 +
- gnu/packages/data-language.scm | 90 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ gnu/packages/data-language.scm | 90 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  2 files changed, 91 insertions(+)
 
 commit 2006874c2b gnu: Add plplot. / 2022-08-25
@@ -675,7 +1080,7 @@ commit 2c37b33796 gnu: Add python-jsonnet. / 2022-06-15
  1 file changed, 11 insertions(+)
 
 commit 0dc8d4f8f0 gnu: Add plan9port. / 2023-06-05
- gnu/packages/plan9.scm | 113 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ gnu/packages/plan9.scm | 113 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  1 file changed, 113 insertions(+)
 
 commit 748665f49a gnu: Add le-biniou. / 2023-05-31
@@ -707,7 +1112,7 @@ commit 76b7c50645 gnu: Add s7. / 2023-04-25
  1 file changed, 29 insertions(+)
 
 commit 1569f7d77e gnu: Add s7-bootstrap. / 2023-04-25
- gnu/packages/lisp.scm | 102 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ gnu/packages/lisp.scm | 102 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
  1 file changed, 101 insertions(+), 1 deletion(-)
 
 commit f2f8e2fa2f gnu: notcurses: Update to 3.0.9. / 2023-04-25
@@ -736,8 +1141,8 @@ commit a50f0dc5ca gnu: schismtracker: Update to 20221201. / 2023-04-18
 
 commit 2662f074a0 gnu: Add clog. / 2023-04-07
  gnu/local.mk                                     |  1 +
- gnu/packages/parallel.scm                        | 29 ++++++++++++
- gnu/packages/patches/clog-fix-shared-build.patch | 85 +++++++++++++++++++++++++++++++++++
+ gnu/packages/parallel.scm                        | 29 ++++++++++++++++
+ gnu/packages/patches/clog-fix-shared-build.patch | 85 +++++++++++++++++++++++++++++++++++++++++++++++
  3 files changed, 115 insertions(+)
 
 commit 8b2d0654ef gnu: Add emacs-totp. / 2023-04-10
@@ -749,7 +1154,7 @@ commit 1e5ef8763f gnu: python-breathe: Update to 4.35.0. / 2023-04-07
  1 file changed, 20 insertions(+), 11 deletions(-)
 
 commit 35002a35f6 gnu: zrythm: Update to 1.0.0-beta.4.5.62. / 2023-02-11
- gnu/packages/music.scm | 146 ++++++++++++++++++++++++++++++++++++++----------------------
+ gnu/packages/music.scm | 146 ++++++++++++++++++++++++++++++++++++++++++++++--------------------------
  1 file changed, 93 insertions(+), 53 deletions(-)
 
 commit ae6925b60b gnu: libaudec: Update to 0.3.4. / 2023-02-11
@@ -765,7 +1170,7 @@ commit 40d39ac510 gnu: Add libpanel. / 2023-02-11
  1 file changed, 35 insertions(+)
 
 commit 9a1d8cd652 gnu: zrythm: Update to 1.0.0-beta.4.5.62. / 2023-02-11
- gnu/packages/music.scm | 146 ++++++++++++++++++++++++++++++++++++++----------------------
+ gnu/packages/music.scm | 146 ++++++++++++++++++++++++++++++++++++++++++++++--------------------------
  1 file changed, 93 insertions(+), 53 deletions(-)
 
 commit b6a31d56a3 gnu: libaudec: Update to 0.3.4. / 2023-02-11
@@ -785,14 +1190,14 @@ commit 31bed61b82 gnu: Add parform. / 2023-03-21
  1 file changed, 17 insertions(+)
 
 commit 15ee08ebf2 gnu: Add form. / 2023-03-21
- gnu/packages/algebra.scm | 63 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ gnu/packages/algebra.scm | 63 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  1 file changed, 63 insertions(+)
 
 commit 8b85aeaa08 gnu: Add samplebrain. / 2023-03-21
  gnu/packages/music.scm | 35 +++++++++++++++++++++++++++++++++++
  1 file changed, 35 insertions(+)
 
-commit 2135f69dc0 ui: format 'display-hint' output when no arguments are passed. / 2023-03-16
+commit 2135f69dc0 ui: format &#x27;display-hint&#x27; output when no arguments are passed. / 2023-03-16
  guix/ui.scm | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
@@ -873,7 +1278,7 @@ commit 344a0d2c11 gnu: Add 9yacc. / 2023-02-24
  1 file changed, 31 insertions(+)
 
 commit b924d89fce gnu: Add lib9. / 2023-02-24
- gnu/packages/suckless.scm | 72 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ gnu/packages/suckless.scm | 72 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  1 file changed, 72 insertions(+)
 
 commit 8935e41952 gnu: r-mapproj: Correct license field to lpl1.02. / 2023-02-24
@@ -976,9 +1381,9 @@ commit 97285a431b gnu: Add grimshot. / 2022-07-26
  1 file changed, 43 insertions(+)
 
 commit ecb91c993d gnu: libphonenumber: Build reproducibly. / 2022-07-19
- gnu/local.mk                                               |  1 +
- gnu/packages/messaging.scm                                 |  3 ++-
- .../patches/libphonenumber-reproducible-build.patch        | 25 +++++++++++++++++++++++++
+ gnu/local.mk                                                 |  1 +
+ gnu/packages/messaging.scm                                   |  3 ++-
+ gnu/packages/patches/libphonenumber-reproducible-build.patch | 25 +++++++++++++++++++++++++
  3 files changed, 28 insertions(+), 1 deletion(-)
 
 commit f2e6891f7d gnu: Add python-bsdiff4. / 2022-07-09
@@ -986,14 +1391,14 @@ commit f2e6891f7d gnu: Add python-bsdiff4. / 2022-07-09
  1 file changed, 21 insertions(+)
 
 commit 95acd67dd3 system: Add -I, --list-installed option. / 2022-07-13
- doc/guix.texi           | 12 +++++++++++
- guix/scripts/system.scm | 67 ++++++++++++++++++++++++++++++++++++++++++------------------
+ doc/guix.texi           | 12 ++++++++++++
+ guix/scripts/system.scm | 67 +++++++++++++++++++++++++++++++++++++++++++++++--------------------
  2 files changed, 59 insertions(+), 20 deletions(-)
 
 commit 55725724dd home: Add -I, --list-installed option. / 2022-07-12
- doc/guix.texi            | 18 ++++++++++++++++-
- guix/scripts/home.scm    | 64 +++++++++++++++++++++++++++++++++++++++++------------------
- guix/scripts/package.scm | 33 ++++++++++++++++++------------
+ doc/guix.texi            | 18 +++++++++++++++++-
+ guix/scripts/home.scm    | 64 +++++++++++++++++++++++++++++++++++++++++++++-------------------
+ guix/scripts/package.scm | 33 ++++++++++++++++++++-------------
  guix/utils.scm           |  6 +++---
  4 files changed, 85 insertions(+), 36 deletions(-)
 
@@ -1021,7 +1426,7 @@ commit e56f2cab60 gnu: Add guile-tap. / 2022-06-16
  gnu/packages/guile-xyz.scm | 42 ++++++++++++++++++++++++++++++++++++++++++
  1 file changed, 42 insertions(+)
 
-commit 7041fe0646 packages: Add 'specifications->packages'. / 2022-05-27
+commit 7041fe0646 packages: Add &#x27;specifications-&gt;packages&#x27;. / 2022-05-27
  gnu/packages.scm             | 11 ++++++++++-
  guix/scripts/home/import.scm |  4 ++--
  tests/home-import.scm        | 13 +++++--------
@@ -1048,7 +1453,7 @@ commit 9c92fb862d gnu: Add rust-merge-derive-0.1. / 2021-06-05
  1 file changed, 18 insertions(+)
 
 commit ed30001472 gnu: Add rust-nitrokey-0.9. / 2021-05-31
- gnu/packages/crates-io.scm | 90 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ gnu/packages/crates-io.scm | 90 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  1 file changed, 90 insertions(+)
 
 commit 51f5292014 gnu: Add rust-progressing-3. / 2021-05-31

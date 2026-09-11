@@ -9,7 +9,7 @@ Past [[https://en.wikipedia.org/wiki/Demoscene][demoscene]] releases are archive
 ** @party 2026
 
 title: Popsicle Ad\\
-compo: Combined graphics (ANSI) - 2nd
+compo: Combined graphics (ANSI)
 
 #+begin_export html
 <a href="/archive/demo/popsicle-ad/popsicle-ad-final.png">
@@ -20,7 +20,7 @@ compo: Combined graphics (ANSI) - 2nd
 ** [[https://www.demosplash.org/][Demosplash]] 2025
 
 title: Welcome to the Osgood Library\\
-compo: ASCII/ANSI art - 2nd
+compo: ASCII/ANSI art
 
 #+begin_export html
 <a href="/archive/demo/osgood/index.html">
@@ -31,7 +31,7 @@ compo: ASCII/ANSI art - 2nd
 ** [[http://atparty-demoscene.net/][@party]] 2025
 
 title: Glyph\\
-compo: tracker music - 2nd
+compo: tracker music
 
 #+begin_export html
 <audio controls preload="none">
@@ -43,7 +43,7 @@ compo: tracker music - 2nd
 ** [[http://atparty-demoscene.net/][@party]] 2024
 
 title: SAMraps\\
-compo: tracker music - 2nd
+compo: tracker music
 
 #+begin_export html
 <audio controls preload="none">

@@ -1,20 +1,41 @@
 #!/usr/bin/env python3
-"""Collect git repos in CWD and summarize an author's contributions.
+"""Collect git repos in CWD and summarize an author's contributions in HTML.
 
+Example:
+  ./git-contrib.py --names="John Doe"
+
+Requires 'git' and 'cloc'.
 This script makes some assumptions and is brittle.
-Feel free to edit. It is available under the MIT License.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
 import argparse
-from pathlib import Path
-import subprocess
-import os
-from datetime import datetime
 import json
+import os
+import subprocess
+from datetime import datetime
+from html import escape
+from pathlib import Path
 
 
 def _get_lang():
-    out = subprocess.check_output(["cloc", "--json", "."], text=True)
+    out = subprocess.check_output(["cloc", "--exclude-lang=HTML", "--json", "."], text=True)
     data = json.loads(out)
     for lang, stats in data.items():
         if not isinstance(stats, dict) or "code" not in stats:
@@ -31,16 +52,14 @@ def _collect_stats(authors):
 
     added = 0
     deleted = 0
-    commits = 0
     for line in ns.splitlines():
         parts = line.split("\t")
         if len(parts) != 3:
             continue
         a, d, _ = parts
-        commits += 1
         added += int(a)
         deleted += int(d)
-    return added, deleted, commits
+    return added, deleted
 
 
 def _collect_data(cwd, names, use_cwd):
@@ -65,12 +84,16 @@ def _collect_data(cwd, names, use_cwd):
             ["git", "log", "--date=short", "--stat", "--pretty=format:commit %h %s / %ad"] + authors,
             text=True).strip()
         lang = _get_lang()
+        commits = len(subprocess.check_output(
+            ["git", "log", "--oneline"] + authors,
+            text=True).strip().splitlines())
 
-        data[name] = {"remote": remote, "info": info, "lang": lang}
-        a, d, c = _collect_stats(authors)
+        a, d = _collect_stats(authors)
+        data[name] = {"remote": remote, "info": info, "lang": lang,
+                      "added": a, "deleted": d, "commits": commits}
         totals["added"] += a
         totals["deleted"] += d
-        totals["commits"] += c
+        totals["commits"] += commits
 
         os.chdir(pwd)
 
@@ -96,9 +119,13 @@ def _write_html_report(data, totals, loc, no_date):
             remote = val["remote"]
             info = val["info"]
             f.write("<h3>{}</h3>\n".format(key))
-            f.write('<p><a href="{}">{}</a><br>Language: {}</p>\n'.format(
-                remote, remote, val["lang"]))
-            f.write('<pre>{}</pre>'.format(info))
+            f.write('''<p><a href="{}">{}</a><br>
+Language: {}<br>
+{:,} {}, {:,} insertions(+), {:,} deletions(-)</p>\n'''.format(
+                remote, remote, val["lang"], val["commits"],
+                ("commits" if val["commits"] > 1 else "commit"),
+                val["added"], val["deleted"]))
+            f.write('<pre>{}</pre>'.format(escape(info)))
 
 
 def _get_args():
@@ -114,7 +141,7 @@ def _get_args():
         help="""author name or email to filter commits by.
 May be specified multiple times""")
     parser.add_argument(
-        "-p", "--pops", action='append', type=str,
+        "-p", "--pops", action='append', default=[], type=str,
         help="""repo names to move to the back of the sorted list.
 May be specified multiple times.""")
     parser.add_argument(
