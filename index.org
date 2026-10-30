@@ -1,6 +1,7 @@
 #+title: Antero Mejr
 #+description: Personal website of Antero Mejr. Info and links to computer science publications,
 #+description: scientific software, writing, etc.
+#+html_head_extra: <link rel="stylesheet" href="/style.css">
 
 * Antero Mejr
 
@@ -22,9 +23,9 @@ for scientific software with the [[https://tupl.cs.tufts.edu/][TuPL group]].
   + [[https://srfi.schemers.org/srfi-252/][SRFI 252: Property Testing]] extension for Scheme
   + [[./foss.org][free software summary]]
 
-- [[./writing.org][writing]]
+- [[./demo.org][demoscene]]
 
-- [[./demo.org][demos]]
+- [[./writing.org][writing]]
 
 ** links
 
@@ -34,8 +35,8 @@ These external links may have outdated or incorrect info.
 
 - publications @ [[https://dblp.org/pid/425/0764.html][DBLP]] / [[https://arxiv.org/search/cs?searchtype=author&query=Mejr,+A][arXiv]] / [[https://orcid.org/0009-0000-8124-467X][ORCiD]] / [[https://dl.acm.org/profile/99661802148][ACM]]
 
-- writing @ [[https://www.tuftsdaily.com/staff/antero-mejr][The Tufts Daily]]
-
 - demos @ [[https://demozoo.org/sceners/143062/][Demozoo]]
 
-- sports stats @ [[https://hemaratings.com/fighters/details/16772/][HEMA Rankings]]
+- writing @ [[https://www.tuftsdaily.com/staff/antero-mejr][The Tufts Daily]]
+
+- stats @ [[https://hemaratings.com/fighters/details/16772/][HEMA Rankings]]

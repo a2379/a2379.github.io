@@ -1,6 +1,7 @@
 #+title: Antero Mejr - FOSS
 #+description: Personal website of Antero Mejr. Info and links to computer science publications,
 #+description: scientific software, writing, etc.
+#+html_head_extra: <link rel="stylesheet" href="/style.css">
 
 * Free software [[./index.org][↑]]
 

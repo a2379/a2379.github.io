@@ -1,19 +1,20 @@
 #+title: Antero - Demo
 #+description: Personal website of Antero Mejr. Info and links to computer science publications,
 #+description: scientific software, writing, etc.
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" href="/style.css">
 
 * Demo [[./index.org][↑]]
 
 Past [[https://en.wikipedia.org/wiki/Demoscene][demoscene]] releases are archived here.
 
-** @party 2026
+** [[http://atparty-demoscene.net/][@party]] 2026
 
 title: Popsicle Ad\\
 compo: Combined graphics (ANSI)
 
 #+begin_export html
-<a href="/archive/demo/popsicle-ad/popsicle-ad-final.png">
-<img width=50% src="/archive/demo/popsicle-ad/popsicle-ad-final.png">
+<a href="/archive/demo/popsicle-ad/popsicle-ad-trim.png">
+<img width=50% src="/archive/demo/popsicle-ad/popsicle-ad-trim.png" style="display: block; margin: 0 auto;">
 </a>
 #+end_export
 

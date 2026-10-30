@@ -3,6 +3,7 @@
 #+description: scientific software, writing, etc.
 #+INFOJS_OPT: view:info path:/org-info.js
 #+options: toc:t title:t
+#+html_head_extra: <link rel="stylesheet" href="/style.css">
 
 * ICE cannot defeat student activism
 :PROPERTIES:
